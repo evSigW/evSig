@@ -7,7 +7,7 @@ from mpl_toolkits.axes_grid.parasite_axes import SubplotHost
 plt.rc('xtick',labelsize=6)
 plt.rc('ytick',labelsize=8)
 
-datasets = pd.read_table("./data/dataset_config.csv")
+datasets = pd.read_table("./data/dataset_config_test.csv")
 yeast_ref = pd.read_table("./data/yeast_reference.csv")
 
 

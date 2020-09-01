@@ -10,7 +10,9 @@ app = Flask(__name__)
 @app.route('/', methods=['POST','GET'])
 def index():
 
-    datasets = pd.read_csv("./data/dataset_config.csv", sep='\t')
+    #datasets = pd.read_csv("./data/dataset_config.csv", sep='\t')
+    #IP test 31/8
+    datasets = pd.read_csv("./data/dataset_config_test.csv", sep='\t')
     datasets_name = datasets.iloc[:,0]
     examples = []
     for i in range(datasets.shape[0]):
@@ -120,7 +122,8 @@ def sig_human_disopred3():
     return render_template('sig_human_disopred3.csv')
 @app.route('/sig_human_SPOTd/')
 def sig_human_SPOTd():
-    return render_template('sig_human_SPOTd.csv')
+    #return render_template('sig_human_SPOTd.csv')
+    return render_template('sig_human_SPOTd_test.csv')
 @app.route('/sig_yeast_2020/')
 def sig_yeast_2020():
     return render_template('sig_yeast_2020.csv')
